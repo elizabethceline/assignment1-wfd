@@ -58,7 +58,7 @@
 
             <div class="flex items-center max-lg:mt-8">
                 <button type="button"
-                    class="inline-block rounded-full bg-[var(--light-blue)] px-6 pb-2 pt-2.5 text-lg font-semibold leading-normal text-white transition duration-150 ease-in-out hover:bg-[var(--yellow)] hover:shadow-primary-2 hover:text-black focus:bg-[var(--yellow)] focus:outline-none focus:ring-0 focus:text-black active:bg-[var(--yellow)] active:shadow-primary-2 active:text-black motion-reduce:transition-none">
+                    class="inline-block rounded-full bg-[var(--light-blue)] px-6 pb-2 pt-2.5 text-lg font-semibold leading-normal text-white transition duration-300 ease-in-out hover:bg-[var(--yellow)] hover:shadow-primary-2 hover:text-black focus:bg-[var(--yellow)] focus:outline-none focus:ring-0 focus:text-black active:bg-[var(--yellow)] active:shadow-primary-2 active:text-black motion-reduce:transition-none">
                     Download DANA
                 </button>
 
