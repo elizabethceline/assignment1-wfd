@@ -10,6 +10,14 @@
             background: linear-gradient(0deg, var(--blue) 14.23%, rgba(22, 138, 214, 0) 76.69%);
         }
 
+        .shadow3 {
+            background: linear-gradient(180deg, var(--blue) 25%, rgba(16, 72, 158, 0) 50%);
+        }
+
+        .shadow4 {
+            background: linear-gradient(0deg, var(--blue) 35%, rgba(22, 138, 214, 0) 85%);
+        }
+
         .swiper-wrapper {
             -webkit-transition-timing-function: linear !important;
             transition-timing-function: linear !important;
@@ -24,12 +32,18 @@
         .swiper-button-next2 {
             z-index: 10;
         }
+
+        @media screen and (max-height: 600px) {
+            .tagline-mobile {
+                width: 55% !important;
+            }
+        }
     </style>
 @endsection
 
 @section('content')
-    <section class="video">
-        <div class="relative mt-20 w-full h-screen overflow-hidden">
+    <section class="landing-pc hidden lg:block">
+        <div class="relative mt-16 lg:mt-20 w-full h-screen overflow-hidden">
             <div class="shadow1 w-screen h-[70vh] block absolute top-0"></div>
             <video loop autoplay preload="auto" muted class="absolute top-0 left-0 w-full h-screen object-cover -z-10">
                 <source src="{{ asset('assets/video.mp4') }}" type="video/mp4">
@@ -38,22 +52,32 @@
         </div>
     </section>
 
-    <section class="tagline w-screen h-[30vh] bg-[var(--blue)] flex flex-col items-center relative">
-        <img class="w-[45%] absolute -top-24" src="https://a.m.dana.id/resource/danaweb-v2/hero-personal-tagline.svg"
-            alt="tagline">
+    <section class="tagline w-screen h-[30vh] bg-[var(--blue)] flex-col items-center relative hidden lg:flex">
+        <img class="w-[65%] xl:w-[45%] absolute -top-24 tagline-mobile"
+            src="https://a.m.dana.id/resource/danaweb-v2/hero-personal-tagline.svg" alt="tagline">
+    </section>
+
+    <section class="landing-mobile block lg:hidden w-screen h-screen relative">
+        <div class="shadow3 w-screen h-[40vh] block absolute top-0 z-10"></div>
+        <img src="{{ asset('assets/background.png') }}" alt="" class="w-screen h-screen object-cover z-0">
+        <img src="{{ asset('assets/subject.png') }}" alt=""
+            class="absolute left-1/2 top-1/2 z-0 transform -translate-x-1/2 -translate-y-1/2">
+        <img class="w-[85%] md:w-3/4 absolute left-1/2 top-[85%] z-30 transform -translate-x-1/2 -translate-y-1/2"
+            src="https://a.m.dana.id/resource/danaweb-v2/hero-personal-tagline.svg" alt="tagline">
+        <div class="shadow4 w-screen h-[50vh] block absolute bottom-0 z-10"></div>
     </section>
 
     <section class="w-screen h-fit bg-[var(--blue)] flex flex-col items-center text-center">
-        <h1 class="text-[3.5rem] font-bold text-white mt-10 leading-[1.2]">Mulai transaksi pakai DANA<br>#BukanDompetBiasa
+        <h1 class="text-2xl sm:text-3xl md:text-4xl xl:text-[3.5rem] font-bold text-white mt-10 leading-[1.2]">Mulai transaksi pakai DANA<br>#BukanDompetBiasa
         </h1>
-        <div class="grid grid-cols-2 mt-10 justify-center items-center w-[55%]">
-            <img src="{{ asset('assets/dana-app.png') }}" alt="" class="w-full">
-            <div class="px-6 py-4">
+        <div class="grid lg:grid-cols-2 mt-10 justify-center items-center w-9/12 lg:w-[55%]">
+            <img src="{{ asset('assets/dana-app.png') }}" alt="" class="w-full max-lg:order-last max-lg:mt-8">
+            <div class="lg:px-6 py-4">
                 <div class="bg-white p-2 rounded-lg flex text-left items-center">
                     <img src="{{ asset('assets/barcode.jpg') }}" alt="" class="w-1/2">
-                    <p class="text-xl text-[var(--blue)] font-semibold">Download <br>DANA <br>sekarang!</p>
+                    <p class="text-lg sm:text-xl text-[var(--blue)] font-semibold">Download <br>DANA <br>sekarang!</p>
                 </div>
-                <p class="mt-8 text-white text-base">DANA Indonesia telah terdaftar dan diawasi oleh</p>
+                <p class="mt-8 text-white text-sm md:text-base">DANA Indonesia telah terdaftar dan diawasi oleh</p>
                 <div class="flex w-full mt-4 justify-center items-end gap-2">
                     <div class="w-[55%] flex justify-center">
                         <img src="https://a.m.dana.id/resource/danaweb-v2/footer-bank-indonesia-logo.svg" alt="">
@@ -66,19 +90,19 @@
         </div>
     </section>
     <section class="w-screen h-fit py-24 bg-neutral-100 flex flex-col justify-start items-center">
-        <div class="w-9/12 flex gap-20">
-            <div class="w-[40%] flex justify-center items-end pb-6 relative">
+        <div class="w-9/12 flex flex-col lg:flex-row gap-20">
+            <div class="lg:w-[40%] flex justify-center items-end pb-6 relative max-lg:order-last">
                 <img class="w-[85%] rounded-[1rem]" src="{{ asset('assets/bg-dompet.png') }}" alt="">
                 <img class="w-9/12 absolute" src="https://a.m.dana.id/danadev/sushi/Subject_a77296dbd9.png" alt="">
             </div>
-            <div class="w-[60%] flex flex-col justify-center">
-                <h4 class="text-xl text-[var(--blue)]">DOMPET DIGITAL</h4>
-                <h1 class="text-[3.5rem] font-bold text-slate-800 my-2 leading-[1.2]">Seperti dompetmu, tapi lebih canggih
+            <div class="lg:w-[60%] flex flex-col justify-center">
+                <h4 class="text-lg sm:text-xl text-[var(--blue)]">DOMPET DIGITAL</h4>
+                <h1 class="text-2xl sm:text-3xl md:text-4xl xl:text-[3.5rem] font-bold text-slate-800 my-2 leading-[1.2]">Seperti dompetmu, tapi lebih canggih
                 </h1>
-                <h4 class="text-xl text-slate-500">DANA Wallet bikin kamu lebih mudah untuk akses semua kebutuhan
+                <h4 class="text-lg sm:text-xl text-slate-500">DANA Wallet bikin kamu lebih mudah untuk akses semua kebutuhan
                     transaksi dan mulai berinvestasi.</h4>
                 <button type="button"
-                    class="w-fit text-xl inline-block rounded-full bg-transparent border-2 border-[var(--blue)]  mt-4 px-6 pb-2 pt-2.5 font-semibold leading-normal text-[var(--blue)] transition duration-300 ease-in-out hover:bg-[var(--yellow)] hover:text-black hover:border-[var(--yellow)] focus:bg-[var(--yellow)] focus:outline-[var(--yellow)] focus:ring-0 focus:text-black focus:border-[var(--yellow)] active:bg-[var(--yellow)] active:text-black active:border-none motion-reduce:transition-none">
+                    class="w-fit text-lg sm:text-xl inline-block rounded-full bg-transparent border-2 border-[var(--blue)]  mt-4 px-6 pb-2 pt-2.5 font-semibold leading-normal text-[var(--blue)] transition duration-300 ease-in-out hover:bg-[var(--yellow)] hover:text-black hover:border-[var(--yellow)] focus:bg-[var(--yellow)] focus:outline-[var(--yellow)] focus:ring-0 focus:text-black focus:border-[var(--yellow)] active:bg-[var(--yellow)] active:text-black active:border-none motion-reduce:transition-none">
                     Cari tahu selengkapnya
                 </button>
             </div>
