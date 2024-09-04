@@ -68,7 +68,8 @@
     </section>
 
     <section class="w-screen h-fit bg-[var(--blue)] flex flex-col items-center text-center">
-        <h1 class="text-2xl sm:text-3xl md:text-4xl xl:text-[3.5rem] font-bold text-white mt-10 leading-[1.2]">Mulai transaksi pakai DANA<br>#BukanDompetBiasa
+        <h1 class="text-2xl sm:text-3xl md:text-4xl xl:text-[3.5rem] font-bold text-white mt-10 leading-[1.2]">Mulai
+            transaksi pakai DANA<br>#BukanDompetBiasa
         </h1>
         <div class="grid lg:grid-cols-2 mt-10 justify-center items-center w-9/12 lg:w-[55%]">
             <img src="{{ asset('assets/dana-app.png') }}" alt="" class="w-full max-lg:order-last max-lg:mt-8">
@@ -90,14 +91,15 @@
         </div>
     </section>
     <section class="w-screen h-fit py-24 bg-neutral-100 flex flex-col justify-start items-center">
-        <div class="w-9/12 flex flex-col lg:flex-row gap-20">
+        <div class="w-[85%] lg:w-9/12 flex flex-col lg:flex-row gap-20">
             <div class="lg:w-[40%] flex justify-center items-end pb-6 relative max-lg:order-last">
                 <img class="w-[85%] rounded-[1rem]" src="{{ asset('assets/bg-dompet.png') }}" alt="">
                 <img class="w-9/12 absolute" src="https://a.m.dana.id/danadev/sushi/Subject_a77296dbd9.png" alt="">
             </div>
             <div class="lg:w-[60%] flex flex-col justify-center">
                 <h4 class="text-lg sm:text-xl text-[var(--blue)]">DOMPET DIGITAL</h4>
-                <h1 class="text-2xl sm:text-3xl md:text-4xl xl:text-[3.5rem] font-bold text-slate-800 my-2 leading-[1.2]">Seperti dompetmu, tapi lebih canggih
+                <h1 class="text-2xl sm:text-3xl md:text-4xl xl:text-[3.5rem] font-bold text-slate-800 my-2 leading-[1.2]">
+                    Seperti dompetmu, tapi lebih canggih
                 </h1>
                 <h4 class="text-lg sm:text-xl text-slate-500">DANA Wallet bikin kamu lebih mudah untuk akses semua kebutuhan
                     transaksi dan mulai berinvestasi.</h4>
@@ -107,10 +109,10 @@
                 </button>
             </div>
         </div>
-        <div class="w-9/12 mt-16">
+        <div class="w-[85%] lg:w-9/12 mt-16">
             <div class="w-full relative">
                 <div class="swiper multiple-slide-carousel swiper-container relative">
-                    <div class="swiper-wrapper w-full relative !h-max pb-8">
+                    <div class="swiper-wrapper w-full relative !h-max pb-6 lg:pb-8">
                         <div class="swiper-slide">
                             <div
                                 class="bg-white rounded-2xl pt-6 h-96 flex flex-col justify-between items-center text-center">
@@ -162,9 +164,9 @@
                     </div>
                     <div class="w-full flex justify-end items-center gap-4">
                         <button
-                            class="swiper-button-prev2 rounded-full bg-[#45ddd9] p-4 group transition duration-300 ease-in-out hover:bg-[var(--light-blue)]">
-                            <svg width="3rem" height="3rem" viewBox="0 0 24 24" fill="none"
-                                class="group-hover:text-white" xmlns="http://www.w3.org/2000/svg">
+                            class="swiper-button-prev2 rounded-full bg-[#45ddd9] p-2 lg:p-4 group transition duration-300 ease-in-out hover:bg-[var(--light-blue)]">
+                            <svg viewBox="0 0 24 24" fill="none"
+                                class="w-8 h-8 lg:w-12 lg:h-12" xmlns="http://www.w3.org/2000/svg">
                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                                 <g id="SVGRepo_iconCarrier">
@@ -174,10 +176,10 @@
                             </svg>
                         </button>
                         <button
-                            class="swiper-button-next2 rounded-full bg-[#45ddd9] p-4 group transition duration-300 ease-in-out hover:bg-[var(--light-blue)]"
+                            class="swiper-button-next2 rounded-full bg-[#45ddd9] p-2 lg:p-4 group transition duration-300 ease-in-out hover:bg-[var(--light-blue)]"
                             data-carousel-next>
-                            <svg width="3rem" height="3rem" viewBox="0 0 24 24" fill="none"
-                                class="group-hover:text-white" xmlns="http://www.w3.org/2000/svg">
+                            <svg viewBox="0 0 24 24" fill="none"
+                                class="w-8 h-8 lg:w-12 lg:h-12" xmlns="http://www.w3.org/2000/svg">
                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                                 <g id="SVGRepo_iconCarrier">
@@ -196,26 +198,19 @@
     <script>
         var swiper = new Swiper(".multiple-slide-carousel", {
             loop: true,
-            slidesPerView: 3,
-            spaceBetween: 40,
+            slidesPerView: 1,
+            spaceBetween: 30,
             navigation: {
                 nextEl: ".multiple-slide-carousel .swiper-button-next2",
                 prevEl: ".multiple-slide-carousel .swiper-button-prev2",
             },
-            // breakpoints: {
-            //     1920: {
-            //         slidesPerView: 3,
-            //         spaceBetween: 30
-            //     },
-            //     1028: {
-            //         slidesPerView: 2,
-            //         spaceBetween: 30
-            //     },
-            //     990: {
-            //         slidesPerView: 1,
-            //         spaceBetween: 0
-            //     }
-            // }
+            breakpoints: {
+                499: {
+                    slidesPerView: 3,
+                    spaceBetweenSlides: 40
+                },
+
+            }
         });
     </script>
 @endsection
