@@ -1,12 +1,18 @@
 @extends('layout.layout')
 
 @section('head')
+@endsection
+
+@section('content')
     <section class="pt-16 lg:pt-20 w-screen h-fit xl:h-screen bg-neutral-100 flex justify-center items-center">
-        <div class="w-[85%] lg:w-9/12 flex flex-col lg:flex-row justify-center items-center lg:gap-12 max-xl:pt-8 max-xl:pb-20 max-lg:text-center">
-            <img class="w-9/12 sm:w-1/2 lg:w-[20%] max-lg:order-2 max-lg:mt-8" src="{{ asset('assets/phone-service.png') }}" alt="">
+        <div
+            class="w-[85%] lg:w-9/12 flex flex-col lg:flex-row justify-center items-center lg:gap-12 max-xl:pt-8 max-xl:pb-20 max-lg:text-center">
+            <img class="w-9/12 sm:w-1/2 lg:w-[20%] max-lg:order-2 max-lg:mt-8" src="{{ asset('assets/phone-service.png') }}"
+                alt="">
             <div class="max-lg:order-1">
                 <h4 class="text-lg sm:text-xl text-[var(--blue)]">DOMPET DIGITAL</h4>
-                <h1 class="text-2xl sm:text-3xl md:text-4xl xl:text-[3.5rem] font-bold text-slate-800 mt-2 mb-3 lg:mt-4 lg:mb-4 !leading-[1.2]">
+                <h1
+                    class="text-2xl sm:text-3xl md:text-4xl xl:text-[3.5rem] font-bold text-slate-800 mt-2 mb-3 lg:mt-4 lg:mb-4 !leading-[1.2]">
                     Senyata dompet di tangan, secepat akses di genggaman
                 </h1>
                 <h4 class="text-lg sm:text-xl text-slate-500">DANA Wallet bikin hidup kamu jadi ringkas, hanya perlu tambah
@@ -19,7 +25,7 @@
         </div>
     </section>
 
-    <section class="w-screen h-fit pb-20 bg-neutral-100 flex justify-center">
+    <section class="w-screen h-fit pb-24 bg-neutral-100 flex justify-center">
         <div class="w-[85%] lg:w-9/12 h-fit px-8 lg:px-16 py-8 bg-white rounded-2xl">
             <div class="flex flex-col lg:flex-row justify-center items-center lg:gap-12">
                 <div class="lg:p-4 w-full lg:w-[40%] flex justify-center items-center">
@@ -58,9 +64,10 @@
                         class="text-2xl sm:text-3xl md:text-4xl xl:text-[3.5rem] font-bold text-slate-800 my-4 !leading-[1.2]">
 
 
-Terjamin dan terverifikasi aman
+                        Terjamin dan terverifikasi aman
                     </h1>
-                    <h4 class="text-lg sm:text-xl text-slate-500">Diawasi oleh Bank Indonesia & KOMINFO, memiliki sertifikasi PCI DSS & ISO 27001, DANA selalu dijamin keamanannya.</h4>
+                    <h4 class="text-lg sm:text-xl text-slate-500">Diawasi oleh Bank Indonesia & KOMINFO, memiliki
+                        sertifikasi PCI DSS & ISO 27001, DANA selalu dijamin keamanannya.</h4>
                 </div>
             </div>
             <div class="flex flex-col lg:flex-row justify-center items-center lg:gap-12 mt-16 max-lg:mt-8">
@@ -70,7 +77,8 @@ Terjamin dan terverifikasi aman
 
                         Data Pribadi terlindungi di DANA
                     </h1>
-                    <h4 class="text-lg sm:text-xl text-slate-500">Dengan DANA Protection, data kartumu pasti aman dengan enkripsi canggih, bikin datamu hanya kamu aja yang tahu.</h4>
+                    <h4 class="text-lg sm:text-xl text-slate-500">Dengan DANA Protection, data kartumu pasti aman dengan
+                        enkripsi canggih, bikin datamu hanya kamu aja yang tahu.</h4>
                 </div>
                 <div class="lg:p-4 w-full lg:w-[40%] flex justify-center items-center max-lg:order-1">
                     <img class="w-full" src="{{ asset('assets/protect.png') }}" alt="">
@@ -78,9 +86,6 @@ Terjamin dan terverifikasi aman
             </div>
         </div>
     </section>
-@endsection
-
-@section('content')
 @endsection
 
 @section('script')
