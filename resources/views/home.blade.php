@@ -68,8 +68,8 @@
     </section>
 
     <section class="w-screen h-fit bg-[var(--blue)] flex flex-col items-center text-center">
-        <h1 class="text-2xl sm:text-3xl md:text-4xl xl:text-[3.5rem] font-bold text-white mt-10 leading-[1.2]">Mulai
-            transaksi pakai DANA<br>#BukanDompetBiasa
+        <h1 class="text-2xl sm:text-3xl md:text-4xl xl:text-[3.5rem] font-bold text-white mt-10 !leading-[1.2]">Mulai
+            transaksi pakai DANA<br> #BukanDompetBiasa
         </h1>
         <div class="grid lg:grid-cols-2 mt-10 justify-center items-center w-9/12 lg:w-[55%]">
             <img src="{{ asset('assets/dana-app.png') }}" alt="" class="w-full max-lg:order-last max-lg:mt-8">
@@ -98,7 +98,7 @@
             </div>
             <div class="lg:w-[60%] flex flex-col justify-center">
                 <h4 class="text-lg sm:text-xl text-[var(--blue)]">DOMPET DIGITAL</h4>
-                <h1 class="text-2xl sm:text-3xl md:text-4xl xl:text-[3.5rem] font-bold text-slate-800 my-2 leading-[1.2]">
+                <h1 class="text-2xl sm:text-3xl md:text-4xl xl:text-[3.5rem] font-bold text-slate-800 my-2 !leading-[1.2]">
                     Seperti dompetmu, tapi lebih canggih
                 </h1>
                 <h4 class="text-lg sm:text-xl text-slate-500">DANA Wallet bikin kamu lebih mudah untuk akses semua kebutuhan
