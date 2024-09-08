@@ -30,7 +30,7 @@
                 <li class="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
                     <!-- Dashboard link -->
                     <a class="text-lg font-semibold transition duration-200 motion-reduce:transition-none text-white hover:text-white focus:text-white active:text-white lg:px-2"
-                        href="#" data-twe-nav-link-ref>Home</a>
+                        href="{{ route('home') }}" data-twe-nav-link-ref>Home</a>
                 </li>
                 <li class="mb-4 lg:mb-0 lg:pe-2 max-lg:hidden" data-twe-nav-item-ref>
                     <p
@@ -41,7 +41,7 @@
                 <!-- Team link -->
                 <li class="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
                     <a class="text-lg font-semibold transition duration-200 motion-reduce:transition-none text-white hover:text-white focus:text-white active:text-white lg:px-2"
-                        href="#" data-twe-nav-link-ref>Services</a>
+                        href="{{ route('services') }}" data-twe-nav-link-ref>Services</a>
                 </li>
                 <li class="mb-4 lg:mb-0 lg:pe-2 max-lg:hidden" data-twe-nav-item-ref>
                     <p
@@ -52,12 +52,12 @@
                 <!-- Projects link -->
                 <li class="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
                     <a class="text-lg font-semibold transition duration-200 motion-reduce:transition-none text-white hover:text-white focus:text-white active:text-white lg:px-2"
-                        href="#" data-twe-nav-link-ref>Contact Us</a>
+                        href="{{ route('contact') }}" data-twe-nav-link-ref>Contact Us</a>
                 </li>
             </ul>
 
             <label class="inline-flex items-center relative lg:mx-4">
-                <input class="peer hidden" id="toggle" type="checkbox" />
+                <input class="peer hidden" id="theme-toggle" type="checkbox" />
                 <div
                     class="relative w-[110px] h-[45px] bg-white peer-checked:bg-zinc-500 rounded-full after:absolute after:content-[''] after:w-[40px] after:h-[35px] after:bg-gradient-to-r from-orange-500 to-yellow-400 peer-checked:after:from-zinc-900 peer-checked:after:to-zinc-900 after:rounded-full after:top-[5px] after:left-[5px] active:after:w-[50px] peer-checked:after:left-[105px] peer-checked:after:translate-x-[-100%] shadow-sm duration-300 after:duration-300 after:shadow-md">
                 </div>
@@ -87,41 +87,3 @@
         </div>
     </div>
 </nav>
-
-<script>
-    // On page load or when changing themes, best to add inline in `head` to avoid FOUC
-    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia(
-            '(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.classList.add('dark');
-    } else {
-        document.documentElement.classList.remove('dark');
-    };
-
-    function setDarkTheme() {
-        document.documentElement.classList.add("dark");
-        localStorage.theme = "dark";
-    };
-
-    function setLightTheme() {
-        document.documentElement.classList.remove("dark");
-        localStorage.theme = "light";
-    };
-
-    function onThemeSwitcherItemClick(event) {
-        const theme = event.target.dataset.theme;
-
-        if (theme === "system") {
-            localStorage.removeItem("theme");
-            setSystemTheme();
-        } else if (theme === "dark") {
-            setDarkTheme();
-        } else {
-            setLightTheme();
-        }
-    };
-
-    const themeSwitcherItems = document.querySelectorAll("#theme-switcher");
-    themeSwitcherItems.forEach((item) => {
-        item.addEventListener("click", onThemeSwitcherItemClick);
-    });
-</script>
