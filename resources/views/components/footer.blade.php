@@ -1,5 +1,5 @@
 <footer class="w-screen h-fit">
-    <div class="w-full bg-[var(--blue)] flex justify-center items-center">
+    <div class="w-full bg-[var(--blue)] dark:bg-slate-900 flex justify-center items-center">
         <div class="w-[85%] lg:w-9/12 py-24">
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8">
                 <div class="">
