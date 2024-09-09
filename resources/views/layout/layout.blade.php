@@ -75,51 +75,6 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/pagedone@1.2.2/src/js/pagedone.js"></script>
 
-    <script>
-        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia(
-                '(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark')
-        }
-    </script>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const toggleSwitch = document.getElementById('theme-toggle');
-
-            function setTheme(theme) {
-                if (theme === 'dark') {
-                    document.documentElement.classList.add('dark');
-                    toggleSwitch.checked = true;
-                } else {
-                    document.documentElement.classList.remove('dark');
-                    toggleSwitch.checked = false;
-                }
-            }
-
-            const currentTheme = localStorage.getItem('theme');
-            if (currentTheme) {
-                setTheme(currentTheme);
-            } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                setTheme('dark');
-            }
-
-            toggleSwitch.addEventListener('change', function() {
-                const theme = this.checked ? 'dark' : 'light';
-                setTheme(theme);
-                localStorage.setItem('theme', theme);
-            });
-
-            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-                const systemPrefersDark = e.matches;
-                if (!localStorage.getItem('theme')) {
-                    setTheme(systemPrefersDark ? 'dark' : 'light');
-                }
-            });
-        });
-    </script>
-
     @yield('script')
 </body>
 
