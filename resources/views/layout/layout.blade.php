@@ -65,7 +65,7 @@
 </head>
 
 <body>
-    @include('components.navbar2')
+    @include('components.navbar')
     @yield('content')
     @include('components.footer')
 

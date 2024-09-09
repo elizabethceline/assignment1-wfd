@@ -2,7 +2,6 @@
 
 @section('head')
     <style>
-        /* Shadow 1 */
         .shadow1 {
             background: linear-gradient(180deg, var(--blue) 4.23%, rgba(16, 72, 158, 0) 26.69%);
         }
@@ -17,7 +16,6 @@
             }
         }
 
-        /* Shadow 2 */
         .shadow2 {
             background: linear-gradient(0deg, var(--blue) 14.23%, rgba(22, 138, 214, 0) 76.69%);
         }
@@ -32,7 +30,6 @@
             }
         }
 
-        /* Shadow 3 */
         .shadow3 {
             background: linear-gradient(180deg, var(--blue) 25%, rgba(16, 72, 158, 0) 50%);
         }
@@ -47,7 +44,6 @@
             }
         }
 
-        /* Shadow 4 */
         .shadow4 {
             background: linear-gradient(0deg, var(--blue) 35%, rgba(22, 138, 214, 0) 85%);
         }
@@ -61,7 +57,6 @@
                 background: linear-gradient(0deg, #0f172a 35%, rgba(22, 138, 214, 0) 85%);
             }
         }
-
 
         .swiper-wrapper {
             -webkit-transition-timing-function: linear !important;
@@ -136,6 +131,7 @@
             </div>
         </div>
     </section>
+    
     <section class="w-screen h-fit py-24 bg-neutral-100 flex flex-col justify-start items-center dark:bg-slate-800">
         <div class="w-[85%] lg:w-9/12 flex flex-col lg:flex-row gap-20">
             <div class="lg:w-[40%] flex justify-center items-end pb-6 relative max-lg:order-last">
