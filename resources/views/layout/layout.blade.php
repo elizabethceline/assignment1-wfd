@@ -88,7 +88,6 @@
         document.addEventListener("DOMContentLoaded", () => {
             const toggleSwitch = document.getElementById('theme-toggle');
 
-            // Fungsi untuk mengubah tema berdasarkan preferensi atau localStorage
             function setTheme(theme) {
                 if (theme === 'dark') {
                     document.documentElement.classList.add('dark');
@@ -99,7 +98,6 @@
                 }
             }
 
-            // Cek apakah localStorage memiliki preferensi tema, jika tidak ikuti preferensi sistem
             const currentTheme = localStorage.getItem('theme');
             if (currentTheme) {
                 setTheme(currentTheme);
@@ -107,14 +105,12 @@
                 setTheme('dark');
             }
 
-            // Event listener untuk perubahan di localStorage atau preferensi tema sistem
             toggleSwitch.addEventListener('change', function() {
                 const theme = this.checked ? 'dark' : 'light';
                 setTheme(theme);
                 localStorage.setItem('theme', theme);
             });
 
-            // Update tema jika preferensi sistem berubah
             window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
                 const systemPrefersDark = e.matches;
                 if (!localStorage.getItem('theme')) {
