@@ -76,7 +76,7 @@
     <script src="https://cdn.jsdelivr.net/npm/pagedone@1.2.2/src/js/pagedone.js"></script>
 
     <script>
-        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia(
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia(
                 '(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark');
         } else {
@@ -87,22 +87,38 @@
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const toggleSwitch = document.getElementById('theme-toggle');
-            const currentTheme = localStorage.getItem('theme');
 
-            if (currentTheme) {
-                if (currentTheme === 'dark') {
+            // Fungsi untuk mengubah tema berdasarkan preferensi atau localStorage
+            function setTheme(theme) {
+                if (theme === 'dark') {
                     document.documentElement.classList.add('dark');
                     toggleSwitch.checked = true;
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    toggleSwitch.checked = false;
                 }
             }
 
+            // Cek apakah localStorage memiliki preferensi tema, jika tidak ikuti preferensi sistem
+            const currentTheme = localStorage.getItem('theme');
+            if (currentTheme) {
+                setTheme(currentTheme);
+            } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                setTheme('dark');
+            }
+
+            // Event listener untuk perubahan di localStorage atau preferensi tema sistem
             toggleSwitch.addEventListener('change', function() {
-                if (this.checked) {
-                    document.documentElement.classList.add('dark');
-                    localStorage.setItem('theme', 'dark');
-                } else {
-                    document.documentElement.classList.remove('dark');
-                    localStorage.setItem('theme', 'light');
+                const theme = this.checked ? 'dark' : 'light';
+                setTheme(theme);
+                localStorage.setItem('theme', theme);
+            });
+
+            // Update tema jika preferensi sistem berubah
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+                const systemPrefersDark = e.matches;
+                if (!localStorage.getItem('theme')) {
+                    setTheme(systemPrefersDark ? 'dark' : 'light');
                 }
             });
         });

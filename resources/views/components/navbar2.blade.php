@@ -63,7 +63,7 @@
                 </div>
                 <svg height="0" width="100" viewBox="0 0 24 24" data-name="Layer 1" id="Layer_1"
                     xmlns="http://www.w3.org/2000/svg"
-                    class="fill-white peer-checked:opacity-60 absolute w-6 h-6 left-[13px]">
+                    class="fill-white peer-checked:opacity-60 absolute w-6 h-6 left-[13px] hover:">
                     <path
                         d="M12,17c-2.76,0-5-2.24-5-5s2.24-5,5-5,5,2.24,5,5-2.24,5-5,5ZM13,0h-2V5h2V0Zm0,19h-2v5h2v-5ZM5,11H0v2H5v-2Zm19,0h-5v2h5v-2Zm-2.81-6.78l-1.41-1.41-3.54,3.54,1.41,1.41,3.54-3.54ZM7.76,17.66l-1.41-1.41-3.54,3.54,1.41,1.41,3.54-3.54Zm0-11.31l-3.54-3.54-1.41,1.41,3.54,3.54,1.41-1.41Zm13.44,13.44l-3.54-3.54-1.41,1.41,3.54,3.54,1.41-1.41Z">
                     </path>
@@ -77,7 +77,7 @@
                 </svg>
             </label>
 
-            <div class="flex items-center max-lg:mt-8">
+            <div class="flex items-center max-lg:mt-4">
                 <button type="button"
                     class="inline-block rounded-full bg-[var(--light-blue)] px-6 pb-2 pt-2.5 text-lg font-semibold leading-normal text-white transition duration-300 ease-in-out hover:bg-[var(--yellow)] hover:shadow-primary-2 hover:text-black focus:bg-[var(--yellow)] focus:outline-none focus:ring-0 focus:text-black active:bg-[var(--yellow)] active:shadow-primary-2 active:text-black motion-reduce:transition-none">
                     Download DANA
